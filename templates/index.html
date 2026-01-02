@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Controle Financeiro</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+  <body>
+    <h1>Controle Financeiro</h1>
+
+    <main>
+      <section>
+        <h2>Adicionar Despesa</h2>
+        <input id="descDespesa" placeholder="Descrição" />
+        <input id="valorDespesa" type="number" />
+        <select id="tipoDespesa">
+          <option value="fixa">Fixa</option>
+          <option value="unica">Única</option>
+        </select>
+        <button onclick="addDespesa()">Adicionar</button>
+      </section>
+
+      <section>
+        <h2>Adicionar Receita</h2>
+        <input id="descReceita" placeholder="Descrição" />
+        <input id="valorReceita" type="number" />
+        <button onclick="addReceita()">Adicionar</button>
+      </section>
+
+      <section>
+        <h2>Valor para guardar</h2>
+        <input id="guardar" type="number" />
+        <button onclick="guardarValor()">Salvar</button>
+      </section>
+
+      <section>
+        <h2>Resumo</h2>
+        <button type="button" onclick="atualizarResumo()">Atualizar</button>
+        <pre id="resumo"></pre>
+      </section>
+    </main>
+    <script
+      src="{{ url_for('static', filename='js/script.js') }}"
+      defer
+    ></script>
+  </body>
+</html>
