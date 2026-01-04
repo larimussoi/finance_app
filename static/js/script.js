@@ -24,8 +24,8 @@ function addDespesa() {
     descDespesa.value = "";
     valorDespesa.value = "";
     tipoDespesa.value = "fixa";
+    carregarDados();
   });
-  carregarDados();
 }
 
 function addReceita() {
@@ -39,8 +39,8 @@ function addReceita() {
   }).then(() => {
     descReceita.value = "";
     valorReceita.value = "";
+    carregarDados();
   });
-  carregarDados();
 }
 
 function guardarValor() {
@@ -52,8 +52,8 @@ function guardarValor() {
     }),
   }).then(() => {
     guardar.value = "";
+    carregarDados();
   });
-  carregarDados();
 }
 
 function renderDespesas(despesas) {
